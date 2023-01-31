@@ -3,7 +3,7 @@
 
 ## Répartition des tâches :
 * Fonction init :
-    **fddsf
+    * fddsf
 * Fonction Essai :
 * Fonction test :
 * Programme Principal :
