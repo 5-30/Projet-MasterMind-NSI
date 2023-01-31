@@ -1,12 +1,12 @@
-def essai(combinaison):
+def init(combinaison):
     '''
-    Prends une chaine de caractère avec les 4 couleurs dans l'ordre et la transforme en combinaison à tester sous forme de liste.
+    Prends une chaine de caractère avec les 4 couleurs dans l'ordre et la transforme en combinaison de départ sous forme de liste. 
     
     ENTREE : 
-    combinaison : str : la combinaison à transformer en liste pour le test
+    combinaison : str : la combinaison à transformer en liste
     
     SORTIE :
-    combinaison : list : la liste à tester
+    combinaison : list : la liste initiale à comparer à chaque fois
     
     Exemple : Entrée : 1938 Return : [1, 9, 3, 8]
     '''
@@ -17,13 +17,13 @@ def essai(combinaison):
     for i in combinaison:
         if int(i) not in supportedCharacters: # Vérifie que les caractères de l'entrée "combinaison" sont valides
             return "Erreur : Veuillez rentrer une combinaison valide !"
-    return combinaison # Retourne la combinaison à tester
+    return combinaison # Retourne la combinaison de base
 
 if __name__ == "__main__": # seulement si on lance directement le script
     valides = 0 # on définit cette variable pour plus tard.
     for i in range(10000): # On fait une boucle for pour les 10000 premiers nombres (0 compté)
-        if len(essai(str(i))) == 4:
+        if len(init(str(i))) == 4:
             valides = valides + 1 # On incrémente la variable "valides" d'un à chaque fois qu'une valeur est valide
-        print(essai(str(i))) # On affiche le résultat de la fonction, pour tester.
+        print(init(str(i))) # On affiche le résultat de la fonction, pour tester.
     print("Dans cette fonction,", valides, "combinaisons sont valides") # On donne le nombre de combinaisons valides, des fois qu'on veuille vérifier par le calcul
     
