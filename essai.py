@@ -10,7 +10,7 @@ def essai(combinaison):
     
     Exemple : Entrée : 1938 Return : [1, 9, 3, 8]
     '''
-    supportedCharacters = [0,1,2,3,4,5,6,7,8] # liste des caractères possibles
+    supportedCharacters = [1,2,3,4,5,6,7,8] # liste des caractères possibles
     combinaison = list(combinaison) # convertion de la combinaison en liste
     if len(combinaison) > 4: # Vérifie que la combinaison fait la bonne taille
         return "Erreur : Veuillez rentrer une combinaison valide !"
