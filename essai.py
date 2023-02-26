@@ -12,7 +12,7 @@ def essai(combinaison):
     '''
     supportedCharacters = [1,2,3,4,5,6,7,8] # liste des caractères possibles
     combinaison = list(combinaison) # convertion de la combinaison en liste
-    if len(combinaison) > 4: # Vérifie que la combinaison fait la bonne taille
+    if len(combinaison) != 4: # Vérifie que la combinaison fait la bonne taille
         return "Erreur : Veuillez rentrer une combinaison valide !"
     for i in combinaison:
         if int(i) not in supportedCharacters: # Vérifie que les caractères de l'entrée "combinaison" sont valides

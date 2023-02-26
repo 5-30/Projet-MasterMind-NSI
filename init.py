@@ -12,11 +12,11 @@ def init(combinaison):
     '''
     supportedCharacters = [1,2,3,4,5,6,7,8] # liste des caractères possibles
     combinaison = list(combinaison) # convertion de la combinaison en liste
-    if len(combinaison) > 4: # Vérifie que la combinaison fait la bonne taille
-        return "Erreur : Veuillez rentrer une combinaison de moins de 4 caractères !"
+    if len(combinaison) != 4: # Vérifie que la combinaison fait la bonne taille
+        return "[ERREUR] - Veuillez rentrer une combinaison de 4 caractères !"
     for i in combinaison:
         if int(i) not in supportedCharacters: # Vérifie que les caractères de l'entrée "combinaison" sont valides
-            return "Erreur : Veuillez rentrer des couleurs valides (valeurs de 1 à 8) !"
+            return "[ERREUR] - Veuillez rentrer des couleurs valides (valeurs de 1 à 8) !"
     return combinaison # Retourne la combinaison de base
 
 if __name__ == "__main__": # seulement si on lance directement le script
